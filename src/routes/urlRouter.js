@@ -4,4 +4,5 @@ import { validateTokenMiddleware } from "../middlewares/validateTokenMiddleware.
 
 const urlRouter = Router();
 urlRouter.post('/urls/shorten', validateTokenMiddleware, setShortUrl);
+urlRouter.get('/urls/:shortUrl', getUrl);
 export default urlRouter;
